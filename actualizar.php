@@ -56,7 +56,7 @@ $idMongo = $datos->_id;
 
             <button class="btn btn-warning mt-3">
               <i class="fa-solid fa-floppy-disk"></i> Actualizar
-            </button>
+            </button> 
           </form>
 
         </div>
