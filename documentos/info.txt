@@ -1,0 +1,22 @@
+use animales;
+
+db.mascotas.insert({
+    "nombre" : "Boby",
+    "especie" : "Perro",
+    "raza" : "Sabueso",
+    "edad" : "4 meses",
+    "nombre_dueno":"Alma"
+});
+
+db.createUser(
+  {
+    user :  "mongoadmin",
+    pwd :  "123456",
+    roles :  [
+      	 { 	role :  "readWrite",  db :  "crud" 	}
+    ]
+  }
+);
+
+mongo -u  mongoadmin -p 123456 --authenticationDatabase crud
+
