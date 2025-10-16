@@ -2,10 +2,11 @@
 session_start();
 include "./clases/Conexion.php";
 include "./clases/Crud.php";
-include "./header.php";
+
 $crud = new Crud();
 $datos = $crud->mostrarDatos();
 ?>
+<?php include "./header.php";?>
 
 <div class="container">
     <div class="row">

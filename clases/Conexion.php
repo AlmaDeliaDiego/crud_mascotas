@@ -1,22 +1,20 @@
 <?php 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/b221190063/crud_mascotas/vendor/autoload.php";
-
+require_once "/home/alma/crud_php_mongodb/vendor/autoload.php";
 class Conexion {
     public static function conectar() {
         try {
-            $servidor = "localhost";
+            $servidor = "127.0.0.1";
             $puerto = "27017";
-            $BD = "b221190063_crud";
-            $usuario = "backend";
-            $password = "backend2025";
-            $cadenaConexion = "mongodb://$usuario:$password@$servidor:$puerto/$BD?authSource=admin";
+            $usuario = "mongoadmin";
+            $password = "123456";
+            $BD = "animales";
 
-            // Crear cliente y seleccionar base de datos
+            $cadenaConexion = "mongodb://$usuario:$password@$servidor:$puerto/$BD?authSource=$BD";
+
             $cliente = new MongoDB\Client($cadenaConexion);
             return $cliente->selectDatabase($BD);
-
         } catch (\Throwable $th) {
-            return "Error de conexión: " . $th->getMessage();
+            die(" Error de conexión: " . $th->getMessage());
         }
     }
 }

@@ -1,8 +1,9 @@
 <?php
 include "./clases/Conexion.php";
 include "./clases/Crud.php";
-include "./header.php";
+
 ?>
+<?php include "./header.php";?>
 
 <div class="container">
   <div class="row">
